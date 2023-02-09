@@ -1,0 +1,25 @@
+[package]
+name = "clapbasics"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "clapbasics"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.69"
+assert_fs = "1.0.10"
+camino = "1.1.2"
+clap = { version = "4.1.4", features = ["derive"] }
+log = "0.4.17"
+tokio = { version = "1.25.0", features = ["fs", "io-util", "sync", "macros", "rt-multi-thread"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+
+[dev-dependencies]
+assert_cmd = "2.0.8"
+assert_fs = "1.0.10"
+predicates = "2.1.5"
